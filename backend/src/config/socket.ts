@@ -3,10 +3,15 @@ import http from "http";
 
 let io: Server;
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://task-manage-dashboard.netlify.app"
+];
+
 export const initSocket = (server: http.Server) => {
   io = new Server(server, {
     cors: {
-      origin: "http://localhost:5173",
+      origin: allowedOrigins,
       credentials: true
     }
   });
@@ -28,6 +33,8 @@ export const initSocket = (server: http.Server) => {
 };
 
 export const getIO = () => {
-  if (!io) throw new Error("Socket.io not initialized");
+  if (!io) {
+    throw new Error("Socket.io not initialized");
+  }
   return io;
 };
