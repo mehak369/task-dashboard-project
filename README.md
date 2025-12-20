@@ -6,6 +6,7 @@ It allows users to register, log in, create tasks, assign tasks to other users, 
 
 The application focuses on secure authentication, clean backend architecture, real-time communication, and production-ready deployment.
 
+
 Features
 Authentication 
 
@@ -19,7 +20,8 @@ JWT is stored in HTTP-only cookies for better security
 
 Protected routes ensure that only authenticated users can access the dashboard
 
-Task Management (CRUD)
+
+##Task Management (CRUD)
 
 Users can:
 
@@ -33,7 +35,8 @@ Update task status and priority
 
 Delete tasks (only the task creator can delete)
 
-Each task includes:
+
+##Each task includes:
 
 Title
 
@@ -49,7 +52,8 @@ Creator
 
 Assignee
 
-Real-Time Collaboration
+
+##Real-Time Collaboration
 
 Real-time updates are implemented using Socket.io
 
@@ -57,7 +61,8 @@ Task updates are reflected instantly for all connected users
 
 Users receive real-time notifications when a task is assigned to them
 
-Dashboard
+
+##Dashboard
 
 The dashboard displays:
 
@@ -71,8 +76,10 @@ Filters for task status and priority
 
 Sorting by due date
 
+
+
 Tech Stack
-Frontend
+##Frontend:
 
 React (Vite)
 
@@ -86,7 +93,7 @@ Axios for API communication
 
 Socket.io Client
 
-Backend
+##Backend:
 
 Node.js with Express
 
@@ -102,6 +109,7 @@ bcrypt for password hashing
 
 Socket.io for real-time communication
 
+
 Deployment
 
 Frontend deployed on Netlify
@@ -110,7 +118,8 @@ Backend deployed on Render
 
 Database hosted on MongoDB Atlas
 
-Architecture Overview
+
+##Architecture Overview
 
 The backend follows a layered architecture to ensure clarity and maintainability:
 
@@ -126,7 +135,8 @@ Middleware handles authentication and authorization
 
 This separation of concerns improves code readability, scalability, and testability.
 
-Authentication Design
+
+##Authentication Design
 
 Passwords are hashed using bcrypt before being stored in the database
 
@@ -140,7 +150,8 @@ Cross-origin authentication between Netlify and Render is handled using proper c
 
 This ensures secure authentication in a production environment.
 
-Real-Time Communication
+
+##Real-Time Communication
 
 Socket.io is initialized on the backend using the HTTP server
 
@@ -150,13 +161,15 @@ Task assignment and updates emit socket events
 
 The frontend listens to these events and refreshes task data automatically
 
-Testing
+
+##Testing
 
 Unit tests are written for critical backend logic
 
 Tests focus on authentication and task-related business logic
 
 Testing ensures reliability and correctness of core functionality
+
 
 Local Setup Instructions
 Backend
@@ -183,9 +196,9 @@ VITE_API_URL=http://localhost:5050/api
 
 Live Deployment
 
-Frontend: Netlify deployment URL
+Frontend: task-manage-dashboard.netlify.app
 
-Backend API: Render deployment URL
+Backend API: https://task-dashboard-project.onrender.com
 
 Live deployment is mandatory and fully functional.
 
