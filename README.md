@@ -196,7 +196,7 @@ VITE_API_URL=http://localhost:5050/api
 
 Live Deployment
 
-Frontend: task-manage-dashboard.netlify.app
+Frontend: https://task-manage-dashboard.netlify.app/
 
 Backend API: https://task-dashboard-project.onrender.com
 
